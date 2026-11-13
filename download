@@ -1,7 +1,0 @@
-target/
-*.class
-src/main/resources/db.properties
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
