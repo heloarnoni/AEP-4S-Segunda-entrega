@@ -3,6 +3,7 @@ package br.com.ecotrilha;
 import br.com.ecotrilha.connection.ConexaoBD;
 import br.com.ecotrilha.view.AreaVerdeView;
 import br.com.ecotrilha.view.ConsoleUtil;
+import br.com.ecotrilha.view.EspecieView;
 import br.com.ecotrilha.view.Menu;
 
 import java.sql.Connection;
@@ -19,7 +20,7 @@ public class Main {
             return;
         }
 
-        List<Menu> menus = List.of(new AreaVerdeView());
+        List<Menu> menus = List.of(new AreaVerdeView(), new EspecieView());
 
         while (true) {
             System.out.println("\n=== EcoTrilha - Monitoramento da Biodiversidade (ODS 15) ===");
