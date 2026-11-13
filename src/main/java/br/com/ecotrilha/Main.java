@@ -7,6 +7,7 @@ import br.com.ecotrilha.view.ConsoleUtil;
 import br.com.ecotrilha.view.EspecieView;
 import br.com.ecotrilha.view.Menu;
 import br.com.ecotrilha.view.OcorrenciaView;
+import br.com.ecotrilha.view.RelatorioView;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -22,7 +23,8 @@ public class Main {
             return;
         }
 
-        List<Menu> menus = List.of(new AreaVerdeView(), new EspecieView(), new OcorrenciaView(), new AmeacaView());
+        List<Menu> menus = List.of(new AreaVerdeView(), new EspecieView(), new OcorrenciaView(),
+                new AmeacaView(), new RelatorioView());
 
         while (true) {
             System.out.println("\n=== EcoTrilha - Monitoramento da Biodiversidade (ODS 15) ===");
