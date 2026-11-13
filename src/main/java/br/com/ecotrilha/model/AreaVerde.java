@@ -1,5 +1,6 @@
 package br.com.ecotrilha.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AreaVerde {
@@ -11,6 +12,8 @@ public class AreaVerde {
     private String tipo;
     private String cidade;
     private double areaHectares;
+    private final List<Ocorrencia> ocorrencias = new ArrayList<>();
+    private final List<Ameaca> ameacas = new ArrayList<>();
 
     public AreaVerde(Integer id, String nome, String tipo, String cidade, double areaHectares) {
         this.id = id;
@@ -18,6 +21,24 @@ public class AreaVerde {
         this.tipo = tipo;
         this.cidade = cidade;
         setAreaHectares(areaHectares);
+    }
+
+    public void registrarOcorrencia(Ocorrencia ocorrencia) {
+        ocorrencia.setAreaId(id);
+        ocorrencias.add(ocorrencia);
+    }
+
+    public void registrarAmeaca(Ameaca ameaca) {
+        ameaca.setAreaId(id);
+        ameacas.add(ameaca);
+    }
+
+    public List<Ocorrencia> getOcorrencias() {
+        return ocorrencias;
+    }
+
+    public List<Ameaca> getAmeacas() {
+        return ameacas;
     }
 
     public Integer getId() {
